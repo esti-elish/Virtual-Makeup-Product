@@ -1,0 +1,82 @@
+<head> 
+    <title>Image Upload</title>
+    <style>
+      body {
+        margin:0px;
+      }
+    
+      .center {
+        display:inline;
+        margin: 3px;
+      }
+    
+      .form-input {
+        width:100px;
+        padding:3px;
+        background:#fff;
+        border:2px dashed dodgerblue;
+      }
+      .form-input input {
+        display:none;
+      }
+      .form-input label {
+        display:block;
+        width:100px;
+        height: auto;
+        max-height: 100px;
+        background:#333;
+        border-radius:10px;
+        cursor:pointer;
+      }
+    
+      .form-input img {
+        width:100px;
+        height: 100px;
+        margin: 2px;
+        opacity: .4;
+      }
+    
+      .imgRemove{
+        position: relative;
+        bottom: 114px;
+        left: 68%;
+        background-color: transparent;
+        border: none;
+        font-size: 30px;
+        outline: none;
+      }
+      .imgRemove::after{
+        content: ' \21BA';
+        color: #fff;
+        font-weight: 900;
+        border-radius: 8px;
+        cursor: pointer;
+      }
+      .small{
+        color: firebrick;
+      } 
+      </style>
+    
+    </head>
+    
+    <body>
+    
+       <div class="image-upload-one">
+         <div class="center">
+           <div class="form-input">
+             <label for="file-ip-1">
+               <img id="file-ip-1-preview" src="https://i.ibb.co/ZVFsg37/default.png">
+               <button type="button" class="imgRemove" (click)="myImgRemoveFunctionOne()"></button>
+             </label>
+             <input type="file"  name="img_one" id="file-ip-1" accept="image/*" (change)="showPreviewOne($event);">
+           </div>
+           <small class="small">Use the &#8634; icon to reset the image</small>
+         </div>
+       </div>
+        
+      
+       
+    </body>
+    
+  
+  
