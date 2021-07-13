@@ -22,6 +22,7 @@ class MyServer(BaseHTTPRequestHandler):
     # to use the model you need firefly
 
     def do_GET(self):
+
         # getparams
         query_components = parse_qs(urlparse(self.path).query)
         self.send_response(200)
