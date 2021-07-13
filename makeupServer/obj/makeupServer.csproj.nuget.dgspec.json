@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "M:\\BinaProj\\makeupServer\\makeupServer.csproj": {}
+    "M:\\BinaProj\\repozitory\\Virtual-Makeup-Product\\makeupServer\\makeupServer.csproj": {}
   },
   "projects": {
-    "M:\\BinaProj\\makeupServer\\makeupServer.csproj": {
+    "M:\\BinaProj\\repozitory\\Virtual-Makeup-Product\\makeupServer\\makeupServer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "M:\\BinaProj\\makeupServer\\makeupServer.csproj",
+        "projectUniqueName": "M:\\BinaProj\\repozitory\\Virtual-Makeup-Product\\makeupServer\\makeupServer.csproj",
         "projectName": "makeupServer",
-        "projectPath": "M:\\BinaProj\\makeupServer\\makeupServer.csproj",
+        "projectPath": "M:\\BinaProj\\repozitory\\Virtual-Makeup-Product\\makeupServer\\makeupServer.csproj",
         "packagesPath": "C:\\Users\\212314363\\.nuget\\packages\\",
-        "outputPath": "M:\\BinaProj\\makeupServer\\obj\\",
+        "outputPath": "M:\\BinaProj\\repozitory\\Virtual-Makeup-Product\\makeupServer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -62,7 +62,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }
