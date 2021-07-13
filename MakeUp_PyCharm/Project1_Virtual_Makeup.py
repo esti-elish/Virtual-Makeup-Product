@@ -1,5 +1,56 @@
 #!/usr/bin/env python
 # coding: utf-8
+import os
+from http.server import BaseHTTPRequestHandler
+from http.server import HTTPServer
+import time
+from urllib.parse import urlparse, parse_qs
+import json
+import numpy as np
+from flask import Flask
+import pyodbc
+import ast
+import pandas as pd
+
+hostName = "127.0.0.1"
+hostPort = 9007
+
+
+class MyServer(BaseHTTPRequestHandler):
+    app = Flask(__name__)
+
+    def sentiment(self):
+        pass
+    #     do something
+    # to use the model you need firefly
+
+    def do_GET(self):
+        # getparams
+        query_components = parse_qs(urlparse(self.path).query)
+        self.send_response(200)
+        self.send_header("Content-type", 'application/json')
+        self.end_headers()
+        if "sentiment" in self.path:
+            pass
+        #     call function
+        self.send_response(200)
+        self.end_headers()
+        json_content = json.dumps("the function/ model response", ensure_ascii=False)  # json.dumps(res)
+        print(json_content)
+        self.wfile.write(bytes(str(json_content), "utf-8"))
+        return
+
+# generate the server
+myServer = HTTPServer((hostName, hostPort), MyServer)
+print(time.asctime(), "Server Starts - %s:%s" % (hostName, hostPort))
+try:
+    myServer.serve_forever()
+except KeyboardInterrupt:
+    pass
+
+# stop the server
+myServer.server_close()
+print(time.asctime(), "Server Closed - %s:%s" % (hostName, hostPort))
 
 # # <font color="blue">Project1: Virtual Makeup </font>
 # We have already seen interesting applications of facial features and landmarks such as aging, beardify, face swap etc.
@@ -60,14 +111,12 @@ import matplotlib
 # set the directory path to the project folder
 #from tensorflow import keras
 
-path = 'M:/BinaProj/MakeUp_PyCharm'
+path = r'M:\BinaProj\repozitory\Virtual-Makeup-Product\MakeUp_PyCharm'
 os.chdir(path)
 #print(os.getcwd())
 
 
 # Load faceBlendCommon file to use common functions.
-
-# In[4]:
 
 
 # load the faceBlendCommon script
@@ -152,20 +201,20 @@ points = fbc.getLandmarks(faceDetector, landmarkDetector, choice)
 
 # feature point reveal as a visual reference
 for p in points[0:17]:
-  # Jaw points
-  cv2.circle(imcopy, p, 4, (0,0,255), thickness=-1)
+    # Jaw points
+    cv2.circle(imcopy, p, 4, (0,0,255), thickness=-1)
 for p in points[18:27]:
-  # eyebrows points
-  cv2.circle(imcopy, p, 4, (255,0,0), thickness=-1)
+    # eyebrows points
+    cv2.circle(imcopy, p, 4, (255,0,0), thickness=-1)
 for p in points[28:36]:
-  # nose points
-  cv2.circle(imcopy, p, 4, (0,255,0), thickness=-1)
+    # nose points
+    cv2.circle(imcopy, p, 4, (0,255,0), thickness=-1)
 for p in points[36:48]:
-  # eyes points
-  cv2.circle(imcopy, p, 4, (0,255,255), thickness=-1)
+    # eyes points
+    cv2.circle(imcopy, p, 4, (0,255,255), thickness=-1)
 for p in points[48:]:
-  # lips points
-  cv2.circle(imcopy, p, 4, (255,0,255), thickness=-1)
+    # lips points
+    cv2.circle(imcopy, p, 4, (255,0,255), thickness=-1)
 # plt.imshow(imcopy)
 plt.imshow(imcopy)
 
@@ -214,7 +263,7 @@ imcopy = choice.copy()
 imcopy2 = choice.copy()
 
 for p in upperlips:
-  cv2.circle(imcopy, p, 4, (0,0,255), thickness=-1)
+    cv2.circle(imcopy, p, 4, (0,0,255), thickness=-1)
 
 plt.imshow(imcopy)
 
@@ -271,7 +320,7 @@ mask = np.zeros((row, col), dtype=choice.dtype)
 cv2.fillPoly(mask, [uHull], (255));
 cv2.fillPoly(mask, [lHull], (255));
 
-bit_mask = mask.astype(np.bool)
+bit_mask = mask.astype(bool)
 
 
 # In[17]:
@@ -528,4 +577,6 @@ import time
 #
 #
 #
+
+# In[4]:
 #
