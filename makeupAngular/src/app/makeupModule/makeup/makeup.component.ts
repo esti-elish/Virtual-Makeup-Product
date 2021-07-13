@@ -1,12 +1,20 @@
 import { Component, OnInit } from '@angular/core';
-
+import {MakeupService} from './makeup.service'
 @Component({
   selector: 'app-makeup',
   templateUrl: './makeup.component.html',
 })
 export class MakeupComponent implements OnInit {
+  st: String;
 
-  constructor() { }
+  constructor(private _makeupService: MakeupService) { 
+    debugger
+    this._makeupService.getScheduleFromServer().subscribe(data=>{
+    
+      this.st=data;
+     
+    }
+    )}
 
   ngOnInit(): void {
     
