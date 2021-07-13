@@ -77,6 +77,7 @@ print(time.asctime(), "Server Closed - %s:%s" % (hostName, hostPort))
 # ### <font color="green">Marks Distribution</font>
 #
 # 1. Feature 1: 35 marks
+#
 # 1. Video for Feature 1: 15 marks
 # 1. Feature 2: 35 marks
 # 1. Video for Feature 2: 15 marks
@@ -200,24 +201,35 @@ points = fbc.getLandmarks(faceDetector, landmarkDetector, choice)
 # print(points)
 
 # feature point reveal as a visual reference
-for p in points[0:17]:
+#for p in points[0:17]:
     # Jaw points
-    cv2.circle(imcopy, p, 4, (0,0,255), thickness=-1)
-for p in points[18:27]:
+#    cv2.circle(imcopy, p, 4, (0,0,255), thickness=-1)
+#for p in points[18:27]:
     # eyebrows points
-    cv2.circle(imcopy, p, 4, (255,0,0), thickness=-1)
-for p in points[28:36]:
+#    cv2.circle(imcopy, p, 4, (255,0,0), thickness=-1)
+#for p in points[28:36]:
     # nose points
-    cv2.circle(imcopy, p, 4, (0,255,0), thickness=-1)
-for p in points[36:48]:
+#    cv2.circle(imcopy, p, 4, (0,255,0), thickness=-1)
+#for p in points[36:48]:
     # eyes points
-    cv2.circle(imcopy, p, 4, (0,255,255), thickness=-1)
-for p in points[48:]:
+#    cv2.circle(imcopy, p, 4, (0,255,255), thickness=-1)
+#for p in points[48:]:
     # lips points
-    cv2.circle(imcopy, p, 4, (255,0,255), thickness=-1)
+#    cv2.circle(imcopy, p, 4, (255,0,255), thickness=-1)
 # plt.imshow(imcopy)
-plt.imshow(imcopy)
 
+cv2.circle(imcopy, points[8], 4, (255,0,255), thickness=-1)
+cv2.circle(imcopy, points[28], 4, (255,0,255), thickness=-1)
+
+points = np.array(points)
+nose = points[28]
+chin = points[0]
+
+p = (0.3 * points[28] + 0.7 * points[4]).astype("int")
+cv2.circle(imcopy, tuple(p.tolist()), 4, (255,0,255), thickness=-1)
+
+plt.imshow(imcopy)
+plt.show()
 
 
 # # <font color="blue">Feature 1: Lip Change</font>
@@ -392,6 +404,65 @@ plt.imshow(out)
 
 
 plt.imsave('girl-no-makeup-'+'lip-color-change.png', out)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 # # <font color="blue">Feature 2</font>
@@ -580,3 +651,4 @@ import time
 
 # In[4]:
 #
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
