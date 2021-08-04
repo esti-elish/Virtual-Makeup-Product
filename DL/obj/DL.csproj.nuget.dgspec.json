@@ -1,24 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "M:\\BinaProj\\repozitory\\Virtual-Makeup-Product\\DL\\DL.csproj": {}
+    "C:\\Users\\mby\\Desktop\\esti\\Virtual-Makeup-Product\\DL\\DL.csproj": {}
   },
   "projects": {
-    "M:\\BinaProj\\repozitory\\Virtual-Makeup-Product\\DL\\DL.csproj": {
+    "C:\\Users\\mby\\Desktop\\esti\\Virtual-Makeup-Product\\DL\\DL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "M:\\BinaProj\\repozitory\\Virtual-Makeup-Product\\DL\\DL.csproj",
+        "projectUniqueName": "C:\\Users\\mby\\Desktop\\esti\\Virtual-Makeup-Product\\DL\\DL.csproj",
         "projectName": "DL",
-        "projectPath": "M:\\BinaProj\\repozitory\\Virtual-Makeup-Product\\DL\\DL.csproj",
-        "packagesPath": "C:\\Users\\212314363\\.nuget\\packages\\",
-        "outputPath": "M:\\BinaProj\\repozitory\\Virtual-Makeup-Product\\DL\\obj\\",
+        "projectPath": "C:\\Users\\mby\\Desktop\\esti\\Virtual-Makeup-Product\\DL\\DL.csproj",
+        "packagesPath": "C:\\Users\\mby\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mby\\Desktop\\esti\\Virtual-Makeup-Product\\DL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\212314363\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\mby\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -59,7 +58,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100-preview.6.21355.2\\RuntimeIdentifierGraph.json"
         }
       }
     }
